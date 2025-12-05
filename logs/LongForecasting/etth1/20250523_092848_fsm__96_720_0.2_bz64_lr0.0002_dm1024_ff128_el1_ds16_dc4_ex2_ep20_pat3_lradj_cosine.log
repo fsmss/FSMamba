@@ -1,0 +1,38 @@
+Args in experiment:
+Namespace(is_training=1, model_id='ETTh1_96_720', model='FsmMamba', data='ETTh1', root_path='../../dataset/ETT-small/', data_path='ETTh1.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', pe_type='sincos', lradj='cosine', d_state=16, d_conv=4, expand=2, conv_bias=True, bias=True, dt_rank=32, dt_scale=1.0, dt_init='random', dt_max=0.1, dt_init_floor=0.0001, pscan=False, batch_size=64, patience=3, learning_rate=0.0002, e_layers=1, dropout=0.2, train_epochs=20, d_model=1024, enc_in=7, dec_in=7, c_out=7, d_ff=128, seq_len=96, label_len=48, pred_len=720, n_heads=8, d_layers=1, moving_avg=25, factor=1, distil=True, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, des='Exp', loss='MSE', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='4,5,6,7', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=True, i_or_cos=0, base=0, sigma=1, partial_start_index=0)
+Number of GPUs available: 1
+Use GPU: cuda:0
+Total number of parameters: 18525933
+>>>>>>>start training : ETTh1_96_720_FsmMamba_ETTh1_M_ft96_sl48_ll720_pl1024_dm8_nh1_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0_0_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 7825
+val 2161
+test 2161
+	iters: 100, epoch: 1 | loss: 0.6055794
+	speed: 0.1281s/iter; left time: 299.9257s
+Epoch: 1 cost time: 15.629260778427124
+Epoch: 1, Steps: 122 | Train Loss: 0.6127177 Vali Loss: 1.5751417 Test Loss: 0.4809557
+Validation loss decreased (inf --> 1.575142).  Saving model ...
+Updating learning rate to 0.00019876883405951377
+	iters: 100, epoch: 2 | loss: 0.5557271
+	speed: 0.3770s/iter; left time: 836.4850s
+Epoch: 2 cost time: 16.913012742996216
+Epoch: 2, Steps: 122 | Train Loss: 0.5472779 Vali Loss: 1.6012661 Test Loss: 0.5024777
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.00019510565162951537
+	iters: 100, epoch: 3 | loss: 0.4886139
+	speed: 0.3508s/iter; left time: 735.5481s
+Epoch: 3 cost time: 18.058619260787964
+Epoch: 3, Steps: 122 | Train Loss: 0.4987351 Vali Loss: 1.6797421 Test Loss: 0.5241750
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 0.0001891006524188368
+	iters: 100, epoch: 4 | loss: 0.4535834
+	speed: 0.4426s/iter; left time: 874.1281s
+Epoch: 4 cost time: 19.231553077697754
+Epoch: 4, Steps: 122 | Train Loss: 0.4476906 Vali Loss: 1.6424124 Test Loss: 0.5518714
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : ETTh1_96_720_FsmMamba_ETTh1_M_ft96_sl48_ll720_pl1024_dm8_nh1_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0_0_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2161
+test shape: (2161, 1, 720, 7) (2161, 1, 720, 7)
+test shape: (2161, 720, 7) (2161, 720, 7)
+mse:0.48095521330833435, mae:0.4739024043083191,rse:0.6639024615287781

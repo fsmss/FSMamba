@@ -1,0 +1,62 @@
+Args in experiment:
+Namespace(is_training=1, model_id='ETTm1_96_720', model='FsmMamba', data='ETTm1', root_path='../../dataset/ETT-small/', data_path='ETTm1.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', pe_type='sincos', lradj='cosine', d_state=16, d_conv=4, expand=2, conv_bias=True, bias=True, dt_rank=32, dt_scale=1.0, dt_init='random', dt_max=0.1, dt_init_floor=0.0001, pscan=False, batch_size=128, patience=3, learning_rate=0.0002, e_layers=1, dropout=0.1, train_epochs=20, d_model=256, enc_in=7, dec_in=7, c_out=7, d_ff=1024, seq_len=96, label_len=48, pred_len=720, n_heads=8, d_layers=1, moving_avg=25, factor=1, distil=True, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, des='Exp', loss='MSE', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='4,5,6,7', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=True, i_or_cos=0, base=0, sigma=1, partial_start_index=0)
+Number of GPUs available: 1
+Use GPU: cuda:0
+Total number of parameters: 1351149
+>>>>>>>start training : ETTm1_96_720_FsmMamba_ETTm1_M_ft96_sl48_ll720_pl256_dm8_nh1_el1_dl1024_df1_fctimeF_ebTrue_dtExp_projection_0_0_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 33745
+val 10801
+test 10801
+	iters: 100, epoch: 1 | loss: 0.4809277
+	speed: 0.0318s/iter; left time: 163.9801s
+	iters: 200, epoch: 1 | loss: 0.4726616
+	speed: 0.0219s/iter; left time: 111.0632s
+Epoch: 1 cost time: 6.778268814086914
+Epoch: 1, Steps: 263 | Train Loss: 0.4927537 Vali Loss: 0.9794405 Test Loss: 0.4668004
+Validation loss decreased (inf --> 0.979441).  Saving model ...
+Updating learning rate to 0.00019876883405951377
+	iters: 100, epoch: 2 | loss: 0.4628018
+	speed: 0.3858s/iter; left time: 1889.6410s
+	iters: 200, epoch: 2 | loss: 0.4440761
+	speed: 0.0219s/iter; left time: 105.1463s
+Epoch: 2 cost time: 5.902750492095947
+Epoch: 2, Steps: 263 | Train Loss: 0.4478287 Vali Loss: 0.9708585 Test Loss: 0.4648212
+Validation loss decreased (0.979441 --> 0.970858).  Saving model ...
+Updating learning rate to 0.00019510565162951537
+	iters: 100, epoch: 3 | loss: 0.4265042
+	speed: 0.3840s/iter; left time: 1779.6959s
+	iters: 200, epoch: 3 | loss: 0.4179502
+	speed: 0.0220s/iter; left time: 99.8338s
+Epoch: 3 cost time: 5.927569150924683
+Epoch: 3, Steps: 263 | Train Loss: 0.4346746 Vali Loss: 0.9665338 Test Loss: 0.4662835
+Validation loss decreased (0.970858 --> 0.966534).  Saving model ...
+Updating learning rate to 0.0001891006524188368
+	iters: 100, epoch: 4 | loss: 0.3933631
+	speed: 0.3994s/iter; left time: 1746.2562s
+	iters: 200, epoch: 4 | loss: 0.3992706
+	speed: 0.0220s/iter; left time: 94.0948s
+Epoch: 4 cost time: 5.933119535446167
+Epoch: 4, Steps: 263 | Train Loss: 0.4214818 Vali Loss: 0.9715363 Test Loss: 0.4717104
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.00018090169943749476
+	iters: 100, epoch: 5 | loss: 0.4123830
+	speed: 0.3921s/iter; left time: 1611.2111s
+	iters: 200, epoch: 5 | loss: 0.3842941
+	speed: 0.0224s/iter; left time: 89.7138s
+Epoch: 5 cost time: 5.9848339557647705
+Epoch: 5, Steps: 263 | Train Loss: 0.4083672 Vali Loss: 0.9726744 Test Loss: 0.4911371
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 0.00017071067811865476
+	iters: 100, epoch: 6 | loss: 0.3731166
+	speed: 0.4380s/iter; left time: 1684.5587s
+	iters: 200, epoch: 6 | loss: 0.3672045
+	speed: 0.0543s/iter; left time: 203.5350s
+Epoch: 6 cost time: 15.015547037124634
+Epoch: 6, Steps: 263 | Train Loss: 0.3945869 Vali Loss: 0.9837966 Test Loss: 0.5032200
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : ETTm1_96_720_FsmMamba_ETTm1_M_ft96_sl48_ll720_pl256_dm8_nh1_el1_dl1024_df1_fctimeF_ebTrue_dtExp_projection_0_0_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 10801
+test shape: (10801, 1, 720, 7) (10801, 1, 720, 7)
+test shape: (10801, 720, 7) (10801, 720, 7)
+mse:0.4662836790084839, mae:0.44531887769699097,rse:0.6496745347976685

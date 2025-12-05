@@ -1,0 +1,34 @@
+Args in experiment:
+Namespace(is_training=1, model_id='ETTh2_96_336', model='FsmMamba', data='ETTh2', root_path='../../dataset/ETT-small/', data_path='ETTh2.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', pe_type='no', lradj='cosine', d_state=16, d_conv=4, expand=2, conv_bias=True, bias=True, dt_rank=32, dt_scale=1.0, dt_init='random', dt_max=0.1, dt_init_floor=0.0001, pscan=False, batch_size=128, patience=3, learning_rate=0.0001, e_layers=1, dropout=0.2, train_epochs=20, d_model=512, enc_in=7, dec_in=7, c_out=7, d_ff=1024, seq_len=96, label_len=48, pred_len=336, n_heads=8, d_layers=1, moving_avg=25, factor=1, distil=True, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, des='Exp', loss='MSE', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='4,5,6,7', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=True, i_or_cos=0, base=0, sigma=1, partial_start_index=0)
+Number of GPUs available: 1
+Use GPU: cuda:0
+Total number of parameters: 4691821
+>>>>>>>start training : ETTh2_96_336_FsmMamba_ETTh2_M_ft96_sl48_ll336_pl512_dm8_nh1_el1_dl1024_df1_fctimeF_ebTrue_dtExp_projection_0_0_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 8209
+val 2545
+test 2545
+Epoch: 1 cost time: 9.87336254119873
+Epoch: 1, Steps: 64 | Train Loss: 0.6855482 Vali Loss: 0.3690004 Test Loss: 0.4242697
+Validation loss decreased (inf --> 0.369000).  Saving model ...
+Updating learning rate to 9.938441702975689e-05
+Epoch: 2 cost time: 10.41808295249939
+Epoch: 2, Steps: 64 | Train Loss: 0.6403854 Vali Loss: 0.3645147 Test Loss: 0.4184177
+Validation loss decreased (0.369000 --> 0.364515).  Saving model ...
+Updating learning rate to 9.755282581475769e-05
+Epoch: 3 cost time: 9.861872434616089
+Epoch: 3, Steps: 64 | Train Loss: 0.6049290 Vali Loss: 0.3726972 Test Loss: 0.4198511
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 9.45503262094184e-05
+Epoch: 4 cost time: 10.630631923675537
+Epoch: 4, Steps: 64 | Train Loss: 0.5719986 Vali Loss: 0.3771009 Test Loss: 0.4239846
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 9.045084971874738e-05
+Epoch: 5 cost time: 10.812514543533325
+Epoch: 5, Steps: 64 | Train Loss: 0.5495815 Vali Loss: 0.3820005 Test Loss: 0.4221851
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : ETTh2_96_336_FsmMamba_ETTh2_M_ft96_sl48_ll336_pl512_dm8_nh1_el1_dl1024_df1_fctimeF_ebTrue_dtExp_projection_0_0_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2545
+test shape: (2545, 1, 336, 7) (2545, 1, 336, 7)
+test shape: (2545, 336, 7) (2545, 336, 7)
+mse:0.4184175431728363, mae:0.4302905797958374,rse:0.5171833038330078
