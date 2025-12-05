@@ -1,0 +1,103 @@
+/home/ubuntu/fsm_file/FSMamba/model/__init__.py
+Args in experiment:
+Namespace(is_training=1, model_id='weather_96_96', model='FsmMamba', data='custom', root_path='../../dataset/weather/', data_path='weather.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', pe_type='no', lradj='cosine', d_state=16, d_conv=4, expand=2, conv_bias=True, bias=True, dt_rank=32, dt_scale=1.0, dt_init='random', dt_max=0.1, dt_init_floor=0.0001, pscan=False, batch_size=128, patience=3, learning_rate=0.0001, e_layers=2, dropout=0.2, train_epochs=20, d_model=256, enc_in=21, dec_in=21, c_out=21, d_ff=512, seq_len=96, label_len=48, pred_len=96, n_heads=8, d_layers=1, moving_avg=25, factor=1, distil=True, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, des='Exp', loss='MSE', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='4,5,6,7', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=True, i_or_cos=0, base=0, sigma=1, partial_start_index=0)
+Number of GPUs available: 1
+Use GPU: cuda:0
+Total number of parameters: 2333962
+>>>>>>>start training : weather_96_96_FsmMamba_custom_M_ft96_sl48_ll96_pl256_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0_0_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 36696
+val 5175
+test 10444
+	iters: 100, epoch: 1 | loss: 0.4059392
+	speed: 0.0427s/iter; left time: 239.7550s
+	iters: 200, epoch: 1 | loss: 0.4701820
+	speed: 0.0291s/iter; left time: 160.5832s
+Epoch: 1 cost time: 9.70720911026001
+Epoch: 1, Steps: 286 | Train Loss: 0.5374441 Vali Loss: 0.4645470 Test Loss: 0.1911734
+Validation loss decreased (inf --> 0.464547).  Saving model ...
+Updating learning rate to 9.938441702975689e-05
+	iters: 100, epoch: 2 | loss: 0.4288103
+	speed: 0.7144s/iter; left time: 3811.4532s
+	iters: 200, epoch: 2 | loss: 0.7508715
+	speed: 0.0352s/iter; left time: 184.2558s
+Epoch: 2 cost time: 9.734961748123169
+Epoch: 2, Steps: 286 | Train Loss: 0.4612946 Vali Loss: 0.4284133 Test Loss: 0.1770353
+Validation loss decreased (0.464547 --> 0.428413).  Saving model ...
+Updating learning rate to 9.755282581475769e-05
+	iters: 100, epoch: 3 | loss: 0.3317765
+	speed: 0.7317s/iter; left time: 3694.2955s
+	iters: 200, epoch: 3 | loss: 0.6417322
+	speed: 0.0307s/iter; left time: 151.8690s
+Epoch: 3 cost time: 8.824009656906128
+Epoch: 3, Steps: 286 | Train Loss: 0.4313852 Vali Loss: 0.4103383 Test Loss: 0.1684745
+Validation loss decreased (0.428413 --> 0.410338).  Saving model ...
+Updating learning rate to 9.45503262094184e-05
+	iters: 100, epoch: 4 | loss: 0.7475173
+	speed: 0.7327s/iter; left time: 3489.9720s
+	iters: 200, epoch: 4 | loss: 0.2923235
+	speed: 0.0311s/iter; left time: 145.0353s
+Epoch: 4 cost time: 8.758654117584229
+Epoch: 4, Steps: 286 | Train Loss: 0.4163530 Vali Loss: 0.4059841 Test Loss: 0.1685611
+Validation loss decreased (0.410338 --> 0.405984).  Saving model ...
+Updating learning rate to 9.045084971874738e-05
+	iters: 100, epoch: 5 | loss: 0.3328121
+	speed: 0.7196s/iter; left time: 3221.7999s
+	iters: 200, epoch: 5 | loss: 0.2933170
+	speed: 0.0298s/iter; left time: 130.3599s
+Epoch: 5 cost time: 8.859153747558594
+Epoch: 5, Steps: 286 | Train Loss: 0.4085560 Vali Loss: 0.4016798 Test Loss: 0.1668077
+Validation loss decreased (0.405984 --> 0.401680).  Saving model ...
+Updating learning rate to 8.535533905932738e-05
+	iters: 100, epoch: 6 | loss: 0.3955067
+	speed: 0.8672s/iter; left time: 3634.4040s
+	iters: 200, epoch: 6 | loss: 0.2977095
+	speed: 0.0302s/iter; left time: 123.6658s
+Epoch: 6 cost time: 8.832097291946411
+Epoch: 6, Steps: 286 | Train Loss: 0.4020532 Vali Loss: 0.3953675 Test Loss: 0.1646649
+Validation loss decreased (0.401680 --> 0.395367).  Saving model ...
+Updating learning rate to 7.938926261462366e-05
+	iters: 100, epoch: 7 | loss: 0.2647273
+	speed: 0.7292s/iter; left time: 2847.4128s
+	iters: 200, epoch: 7 | loss: 0.3449343
+	speed: 0.0309s/iter; left time: 117.5083s
+Epoch: 7 cost time: 8.76823878288269
+Epoch: 7, Steps: 286 | Train Loss: 0.3955459 Vali Loss: 0.3970428 Test Loss: 0.1634955
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 7.269952498697734e-05
+	iters: 100, epoch: 8 | loss: 0.7620161
+	speed: 0.7230s/iter; left time: 2616.6064s
+	iters: 200, epoch: 8 | loss: 0.3562252
+	speed: 0.0298s/iter; left time: 104.8865s
+Epoch: 8 cost time: 8.993671417236328
+Epoch: 8, Steps: 286 | Train Loss: 0.3902737 Vali Loss: 0.3939497 Test Loss: 0.1627173
+Validation loss decreased (0.395367 --> 0.393950).  Saving model ...
+Updating learning rate to 6.545084971874738e-05
+	iters: 100, epoch: 9 | loss: 0.2652414
+	speed: 0.7357s/iter; left time: 2452.0900s
+	iters: 200, epoch: 9 | loss: 0.2319907
+	speed: 0.0298s/iter; left time: 96.3275s
+Epoch: 9 cost time: 8.941686868667603
+Epoch: 9, Steps: 286 | Train Loss: 0.3854930 Vali Loss: 0.3965659 Test Loss: 0.1621648
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 5.782172325201155e-05
+	iters: 100, epoch: 10 | loss: 0.7073134
+	speed: 0.7247s/iter; left time: 2208.0184s
+	iters: 200, epoch: 10 | loss: 0.4290410
+	speed: 0.0327s/iter; left time: 96.2320s
+Epoch: 10 cost time: 9.16835331916809
+Epoch: 10, Steps: 286 | Train Loss: 0.3806337 Vali Loss: 0.3969027 Test Loss: 0.1626006
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 5e-05
+	iters: 100, epoch: 11 | loss: 0.2878137
+	speed: 0.7362s/iter; left time: 2032.6477s
+	iters: 200, epoch: 11 | loss: 0.3218614
+	speed: 0.0295s/iter; left time: 78.3992s
+Epoch: 11 cost time: 8.630922317504883
+Epoch: 11, Steps: 286 | Train Loss: 0.3765830 Vali Loss: 0.3989013 Test Loss: 0.1634369
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : weather_96_96_FsmMamba_custom_M_ft96_sl48_ll96_pl256_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0_0_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 10444
+test shape: (10444, 1, 96, 21) (10444, 1, 96, 21)
+test shape: (10444, 96, 21) (10444, 96, 21)
+mse:0.16271716356277466, mae:0.20733630657196045,rse:0.5315803289413452

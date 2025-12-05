@@ -1,0 +1,39 @@
+/home/ubuntu/fsm_file/FSMamba/model/__init__.py
+Args in experiment:
+Namespace(is_training=1, model_id='exchange_rate_96_720', model='FsmMamba', data='custom', root_path='../../dataset/exchange_rate/', data_path='exchange_rate.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', pe_type='sincos', lradj='cosine', d_state=32, d_conv=2, expand=2, conv_bias=True, bias=True, dt_rank=32, dt_scale=1.0, dt_init='random', dt_max=0.1, dt_init_floor=0.0001, pscan=False, batch_size=32, patience=3, learning_rate=0.0002, e_layers=1, dropout=0.1, train_epochs=10, d_model=1024, enc_in=8, dec_in=8, c_out=8, d_ff=102, seq_len=96, label_len=48, pred_len=720, n_heads=8, d_layers=1, moving_avg=25, factor=1, distil=True, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, des='Exp', loss='MSE', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='4,5,6,7', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=True, i_or_cos=0, base=0, sigma=1, partial_start_index=0)
+Number of GPUs available: 1
+Use GPU: cuda:0
+Total number of parameters: 18668273
+>>>>>>>start training : exchange_rate_96_720_FsmMamba_custom_M_ft96_sl48_ll720_pl1024_dm8_nh1_el1_dl102_df1_fctimeF_ebTrue_dtExp_projection_0_0_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4496
+val 41
+test 798
+	iters: 100, epoch: 1 | loss: 0.7722616
+	speed: 0.0364s/iter; left time: 47.3042s
+Epoch: 1 cost time: 4.65898871421814
+Epoch: 1, Steps: 140 | Train Loss: 0.8160976 Vali Loss: 1.0764272 Test Loss: 0.8539814
+Validation loss decreased (inf --> 1.076427).  Saving model ...
+Updating learning rate to 0.00019510565162951537
+	iters: 100, epoch: 2 | loss: 0.8447650
+	speed: 0.0666s/iter; left time: 77.3073s
+Epoch: 2 cost time: 3.428767681121826
+Epoch: 2, Steps: 140 | Train Loss: 0.7512217 Vali Loss: 1.5646144 Test Loss: 0.8379948
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.00018090169943749476
+	iters: 100, epoch: 3 | loss: 0.5966038
+	speed: 0.0697s/iter; left time: 71.1281s
+Epoch: 3 cost time: 3.301162004470825
+Epoch: 3, Steps: 140 | Train Loss: 0.6088512 Vali Loss: 1.3480510 Test Loss: 0.9183556
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 0.00015877852522924732
+	iters: 100, epoch: 4 | loss: 0.4228090
+	speed: 0.0731s/iter; left time: 64.3649s
+Epoch: 4 cost time: 3.6464521884918213
+Epoch: 4, Steps: 140 | Train Loss: 0.4688186 Vali Loss: 1.5707357 Test Loss: 0.9104336
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : exchange_rate_96_720_FsmMamba_custom_M_ft96_sl48_ll720_pl1024_dm8_nh1_el1_dl102_df1_fctimeF_ebTrue_dtExp_projection_0_0_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 798
+test shape: (798, 1, 720, 8) (798, 1, 720, 8)
+test shape: (798, 720, 8) (798, 720, 8)
+mse:0.8539819121360779, mae:0.6974536776542664,rse:0.7269315123558044

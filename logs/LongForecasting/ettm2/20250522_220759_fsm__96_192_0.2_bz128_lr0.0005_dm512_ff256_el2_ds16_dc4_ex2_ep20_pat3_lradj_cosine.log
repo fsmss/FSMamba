@@ -1,0 +1,47 @@
+/home/ubuntu/fsm_file/FSMamba/model/__init__.py
+Args in experiment:
+Namespace(is_training=1, model_id='ETTm2_96_192', model='FsmMamba', data='ETTm2', root_path='../../dataset/ETT-small/', data_path='ETTm2.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', pe_type='sincos', lradj='cosine', d_state=16, d_conv=4, expand=2, conv_bias=True, bias=True, dt_rank=32, dt_scale=1.0, dt_init='random', dt_max=0.1, dt_init_floor=0.0001, pscan=False, batch_size=128, patience=3, learning_rate=0.0005, e_layers=2, dropout=0.2, train_epochs=20, d_model=512, enc_in=7, dec_in=7, c_out=7, d_ff=256, seq_len=96, label_len=48, pred_len=192, n_heads=8, d_layers=1, moving_avg=25, factor=1, distil=True, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=0, itr=1, des='Exp', loss='MSE', use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='4,5,6,7', exp_name='MTSF', channel_independence=False, inverse=False, class_strategy='projection', target_root_path='./data/electricity/', target_data_path='electricity.csv', efficient_training=False, use_norm=True, i_or_cos=0, base=0, sigma=1, partial_start_index=0)
+Number of GPUs available: 1
+Use GPU: cuda:0
+Total number of parameters: 9084154
+>>>>>>>start training : ETTm2_96_192_FsmMamba_ETTm2_M_ft96_sl48_ll192_pl512_dm8_nh2_el1_dl256_df1_fctimeF_ebTrue_dtExp_projection_0_0_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 34273
+val 11329
+test 11329
+	iters: 100, epoch: 1 | loss: 0.2913772
+	speed: 0.1581s/iter; left time: 828.8065s
+	iters: 200, epoch: 1 | loss: 0.2591136
+	speed: 0.1472s/iter; left time: 756.5543s
+Epoch: 1 cost time: 40.43076229095459
+Epoch: 1, Steps: 267 | Train Loss: 0.3230571 Vali Loss: 0.1725351 Test Loss: 0.2420007
+Validation loss decreased (inf --> 0.172535).  Saving model ...
+Updating learning rate to 0.0004969220851487844
+	iters: 100, epoch: 2 | loss: 0.2226254
+	speed: 1.9956s/iter; left time: 9926.1015s
+	iters: 200, epoch: 2 | loss: 0.2072680
+	speed: 0.1404s/iter; left time: 684.4228s
+Epoch: 2 cost time: 38.41912317276001
+Epoch: 2, Steps: 267 | Train Loss: 0.2742612 Vali Loss: 0.1732998 Test Loss: 0.2522443
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.0004877641290737884
+	iters: 100, epoch: 3 | loss: 0.1771614
+	speed: 1.8971s/iter; left time: 8929.4196s
+	iters: 200, epoch: 3 | loss: 0.2376838
+	speed: 0.1537s/iter; left time: 707.9296s
+Epoch: 3 cost time: 41.00654339790344
+Epoch: 3, Steps: 267 | Train Loss: 0.2288309 Vali Loss: 0.1783778 Test Loss: 0.2666975
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 0.00047275163104709196
+	iters: 100, epoch: 4 | loss: 0.1566563
+	speed: 1.7509s/iter; left time: 7774.1610s
+	iters: 200, epoch: 4 | loss: 0.1571701
+	speed: 0.1510s/iter; left time: 655.3760s
+Epoch: 4 cost time: 39.790244579315186
+Epoch: 4, Steps: 267 | Train Loss: 0.1842939 Vali Loss: 0.1808756 Test Loss: 0.2705735
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : ETTm2_96_192_FsmMamba_ETTm2_M_ft96_sl48_ll192_pl512_dm8_nh2_el1_dl256_df1_fctimeF_ebTrue_dtExp_projection_0_0_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 11329
+test shape: (11329, 1, 192, 7) (11329, 1, 192, 7)
+test shape: (11329, 192, 7) (11329, 192, 7)
+mse:0.2420005351305008, mae:0.3024373948574066,rse:0.3982018530368805
